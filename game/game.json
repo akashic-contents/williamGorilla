@@ -1,0 +1,1136 @@
+{
+	"width": 640,
+	"height": 360,
+	"fps": 30,
+	"assets": {
+		"before_the_start": {
+			"type": "image",
+			"width": 642,
+			"height": 1810,
+			"path": "image/before_the_start.png"
+		},
+		"description_text": {
+			"type": "image",
+			"width": 425,
+			"height": 215,
+			"path": "image/description_text.png"
+		},
+		"img_num_result": {
+			"type": "image",
+			"width": 936,
+			"height": 83,
+			"path": "image/img_num_result.png"
+		},
+		"img_numbers_n": {
+			"type": "image",
+			"width": 364,
+			"height": 32,
+			"path": "image/img_numbers_n.png"
+		},
+		"img_numbers_n_red": {
+			"type": "image",
+			"width": 364,
+			"height": 32,
+			"path": "image/img_numbers_n_red.png"
+		},
+		"img_wg_num": {
+			"type": "image",
+			"width": 364,
+			"height": 32,
+			"path": "image/img_wg_num.png"
+		},
+		"img_wg_num_cb_json": {
+			"type": "image",
+			"width": 364,
+			"height": 32,
+			"path": "image/img_wg_num_cb_json.png"
+		},
+		"img_wg_ui": {
+			"type": "image",
+			"width": 116,
+			"height": 484,
+			"path": "image/img_wg_ui.png"
+		},
+		"nw_common": {
+			"type": "image",
+			"width": 1024,
+			"height": 512,
+			"path": "image/nw_common.png"
+		},
+		"nw_title": {
+			"type": "image",
+			"width": 500,
+			"height": 316,
+			"path": "image/nw_title.png"
+		},
+		"result_chara_img_01": {
+			"type": "image",
+			"width": 410,
+			"height": 120,
+			"path": "image/result_chara_img_01.png"
+		},
+		"result_chara_img_02": {
+			"type": "image",
+			"width": 410,
+			"height": 120,
+			"path": "image/result_chara_img_02.png"
+		},
+		"result_chara_img_03": {
+			"type": "image",
+			"width": 410,
+			"height": 120,
+			"path": "image/result_chara_img_03.png"
+		},
+		"title_logo": {
+			"type": "image",
+			"width": 460,
+			"height": 200,
+			"path": "image/title_logo.png"
+		},
+		"wg_combo": {
+			"type": "image",
+			"width": 256,
+			"height": 64,
+			"path": "image/wg_combo.png"
+		},
+		"wg_ef": {
+			"type": "image",
+			"width": 1024,
+			"height": 2048,
+			"path": "image/wg_ef.png"
+		},
+		"wg_face": {
+			"type": "image",
+			"width": 1024,
+			"height": 2048,
+			"path": "image/wg_face.png"
+		},
+		"wg_hand": {
+			"type": "image",
+			"width": 1024,
+			"height": 1024,
+			"path": "image/wg_hand.png"
+		},
+		"wg_item1": {
+			"type": "image",
+			"width": 1024,
+			"height": 2048,
+			"path": "image/wg_item1.png"
+		},
+		"wg_item2": {
+			"type": "image",
+			"width": 2048,
+			"height": 2048,
+			"path": "image/wg_item2.png"
+		},
+		"wg_item3": {
+			"type": "image",
+			"width": 1024,
+			"height": 1024,
+			"path": "image/wg_item3.png"
+		},
+		"arrow": {
+			"type": "script",
+			"path": "script/classes/arrow.js",
+			"global": true
+		},
+		"asaInfo": {
+			"type": "script",
+			"path": "script/classes/asaInfo.js",
+			"global": true
+		},
+		"assetInfo": {
+			"type": "script",
+			"path": "script/classes/assetInfo.js",
+			"global": true
+		},
+		"comboAdder": {
+			"type": "script",
+			"path": "script/classes/comboAdder.js",
+			"global": true
+		},
+		"crushItem": {
+			"type": "script",
+			"path": "script/classes/crushItem.js",
+			"global": true
+		},
+		"define": {
+			"type": "script",
+			"path": "script/classes/define.js",
+			"global": true
+		},
+		"difficultyParameters": {
+			"type": "script",
+			"path": "script/classes/difficultyParameters.js",
+			"global": true
+		},
+		"effect": {
+			"type": "script",
+			"path": "script/classes/effect.js",
+			"global": true
+		},
+		"gameCreator": {
+			"type": "script",
+			"path": "script/classes/gameCreator.js",
+			"global": true
+		},
+		"gameParameterReader": {
+			"type": "script",
+			"path": "script/classes/gameParameterReader.js",
+			"global": true
+		},
+		"gameParameters": {
+			"type": "script",
+			"path": "script/classes/gameParameters.js",
+			"global": true
+		},
+		"gaugeIcon": {
+			"type": "script",
+			"path": "script/classes/gaugeIcon.js",
+			"global": true
+		},
+		"miscAssetInfo": {
+			"type": "script",
+			"path": "script/classes/miscAssetInfo.js",
+			"global": true
+		},
+		"playerClass": {
+			"type": "script",
+			"path": "script/classes/playerClass.js",
+			"global": true
+		},
+		"pointAdder": {
+			"type": "script",
+			"path": "script/classes/pointAdder.js",
+			"global": true
+		},
+		"score": {
+			"type": "script",
+			"path": "script/classes/score.js",
+			"global": true
+		},
+		"soundInfo": {
+			"type": "script",
+			"path": "script/classes/soundInfo.js",
+			"global": true
+		},
+		"timerLabel": {
+			"type": "script",
+			"path": "script/classes/timerLabel.js",
+			"global": true
+		},
+		"williamGorilla": {
+			"type": "script",
+			"path": "script/classes/williamGorilla.js",
+			"global": true
+		},
+		"cautionFilledRect": {
+			"type": "script",
+			"path": "script/common/cautionFilledRect.js",
+			"global": true
+		},
+		"commonAsaInfo": {
+			"type": "script",
+			"path": "script/common/commonAsaInfo.js",
+			"global": true
+		},
+		"commonAssetInfo": {
+			"type": "script",
+			"path": "script/common/commonAssetInfo.js",
+			"global": true
+		},
+		"commonDefine": {
+			"type": "script",
+			"path": "script/common/commonDefine.js",
+			"global": true
+		},
+		"commonSoundInfo": {
+			"type": "script",
+			"path": "script/common/commonSoundInfo.js",
+			"global": true
+		},
+		"descriptionSubscene": {
+			"type": "script",
+			"path": "script/common/descriptionSubscene.js",
+			"global": true
+		},
+		"gameSubscene": {
+			"type": "script",
+			"path": "script/common/gameSubscene.js",
+			"global": true
+		},
+		"informationSubscene": {
+			"type": "script",
+			"path": "script/common/informationSubscene.js",
+			"global": true
+		},
+		"mainSceneController": {
+			"type": "script",
+			"path": "script/common/mainSceneController.js",
+			"global": true
+		},
+		"resultSubscene": {
+			"type": "script",
+			"path": "script/common/resultSubscene.js",
+			"global": true
+		},
+		"titleSubscene": {
+			"type": "script",
+			"path": "script/common/titleSubscene.js",
+			"global": true
+		},
+		"wipeManager": {
+			"type": "script",
+			"path": "script/common/wipeManager.js",
+			"global": true
+		},
+		"commonParameterReader": {
+			"type": "script",
+			"path": "script/commonNicowariGame/commonParameterReader.js",
+			"global": true
+		},
+		"gameBase": {
+			"type": "script",
+			"path": "script/commonNicowariGame/gameBase.js",
+			"global": true
+		},
+		"rireGameParameters": {
+			"type": "script",
+			"path": "script/commonNicowariGame/rireGameParameters.js",
+			"global": true
+		},
+		"sceneController": {
+			"type": "script",
+			"path": "script/commonNicowariGame/sceneController.js",
+			"global": true
+		},
+		"subscene": {
+			"type": "script",
+			"path": "script/commonNicowariGame/subscene.js",
+			"global": true
+		},
+		"asaInfoType": {
+			"type": "script",
+			"path": "script/commonTypes/asaInfoType.js",
+			"global": true
+		},
+		"assetInfoType": {
+			"type": "script",
+			"path": "script/commonTypes/assetInfoType.js",
+			"global": true
+		},
+		"miscAssetInfoType": {
+			"type": "script",
+			"path": "script/commonTypes/miscAssetInfoType.js",
+			"global": true
+		},
+		"soundInfoType": {
+			"type": "script",
+			"path": "script/commonTypes/soundInfoType.js",
+			"global": true
+		},
+		"videoAssetInfoType": {
+			"type": "script",
+			"path": "script/commonTypes/videoAssetInfoType.js",
+			"global": true
+		},
+		"mainScene": {
+			"type": "script",
+			"path": "script/mainScene.js",
+			"global": true
+		},
+		"asaEx": {
+			"type": "script",
+			"path": "script/util/asaEx.js",
+			"global": true
+		},
+		"audioUtil": {
+			"type": "script",
+			"path": "script/util/audioUtil.js",
+			"global": true
+		},
+		"entityUtil": {
+			"type": "script",
+			"path": "script/util/entityUtil.js",
+			"global": true
+		},
+		"gameUtil": {
+			"type": "script",
+			"path": "script/util/gameUtil.js",
+			"global": true
+		},
+		"spriteSheetTypes": {
+			"type": "script",
+			"path": "script/util/spriteSheetTypes.js",
+			"global": true
+		},
+		"spriteUtil": {
+			"type": "script",
+			"path": "script/util/spriteUtil.js",
+			"global": true
+		},
+		"tiledUtil": {
+			"type": "script",
+			"path": "script/util/tiledUtil.js",
+			"global": true
+		},
+		"an_apple_hit1": {
+			"type": "text",
+			"path": "text/an_apple_hit1.asaan"
+		},
+		"an_apple_hit2": {
+			"type": "text",
+			"path": "text/an_apple_hit2.asaan"
+		},
+		"an_apple_hit3": {
+			"type": "text",
+			"path": "text/an_apple_hit3.asaan"
+		},
+		"an_apple_hit4": {
+			"type": "text",
+			"path": "text/an_apple_hit4.asaan"
+		},
+		"an_apple_hit5": {
+			"type": "text",
+			"path": "text/an_apple_hit5.asaan"
+		},
+		"an_apple_idle": {
+			"type": "text",
+			"path": "text/an_apple_idle.asaan"
+		},
+		"an_banana_hit1": {
+			"type": "text",
+			"path": "text/an_banana_hit1.asaan"
+		},
+		"an_banana_hit2": {
+			"type": "text",
+			"path": "text/an_banana_hit2.asaan"
+		},
+		"an_banana_hit3": {
+			"type": "text",
+			"path": "text/an_banana_hit3.asaan"
+		},
+		"an_banana_hit4": {
+			"type": "text",
+			"path": "text/an_banana_hit4.asaan"
+		},
+		"an_banana_hit5": {
+			"type": "text",
+			"path": "text/an_banana_hit5.asaan"
+		},
+		"an_banana_idle": {
+			"type": "text",
+			"path": "text/an_banana_idle.asaan"
+		},
+		"an_before_the_start_still": {
+			"type": "text",
+			"path": "text/an_before_the_start_still.asaan"
+		},
+		"an_before_the_start_still_1": {
+			"type": "text",
+			"path": "text/an_before_the_start_still_1.asaan"
+		},
+		"an_before_the_start_still_2": {
+			"type": "text",
+			"path": "text/an_before_the_start_still_2.asaan"
+		},
+		"an_before_the_start_still_3": {
+			"type": "text",
+			"path": "text/an_before_the_start_still_3.asaan"
+		},
+		"an_body_left": {
+			"type": "text",
+			"path": "text/an_body_left.asaan"
+		},
+		"an_body_rignt": {
+			"type": "text",
+			"path": "text/an_body_rignt.asaan"
+		},
+		"an_box_hit1": {
+			"type": "text",
+			"path": "text/an_box_hit1.asaan"
+		},
+		"an_box_hit2": {
+			"type": "text",
+			"path": "text/an_box_hit2.asaan"
+		},
+		"an_box_hit3": {
+			"type": "text",
+			"path": "text/an_box_hit3.asaan"
+		},
+		"an_box_hit4": {
+			"type": "text",
+			"path": "text/an_box_hit4.asaan"
+		},
+		"an_box_hit5": {
+			"type": "text",
+			"path": "text/an_box_hit5.asaan"
+		},
+		"an_box_idle": {
+			"type": "text",
+			"path": "text/an_box_idle.asaan"
+		},
+		"an_combo_combo": {
+			"type": "text",
+			"path": "text/an_combo_combo.asaan"
+		},
+		"an_critical_apple": {
+			"type": "text",
+			"path": "text/an_critical_apple.asaan"
+		},
+		"an_critical_banana": {
+			"type": "text",
+			"path": "text/an_critical_banana.asaan"
+		},
+		"an_critical_box": {
+			"type": "text",
+			"path": "text/an_critical_box.asaan"
+		},
+		"an_critical_egg": {
+			"type": "text",
+			"path": "text/an_critical_egg.asaan"
+		},
+		"an_critical_suika": {
+			"type": "text",
+			"path": "text/an_critical_suika.asaan"
+		},
+		"an_critical_tv": {
+			"type": "text",
+			"path": "text/an_critical_tv.asaan"
+		},
+		"an_critical_wood": {
+			"type": "text",
+			"path": "text/an_critical_wood.asaan"
+		},
+		"an_description_description": {
+			"type": "text",
+			"path": "text/an_description_description.asaan"
+		},
+		"an_egg_hit1": {
+			"type": "text",
+			"path": "text/an_egg_hit1.asaan"
+		},
+		"an_egg_hit2": {
+			"type": "text",
+			"path": "text/an_egg_hit2.asaan"
+		},
+		"an_egg_hit3": {
+			"type": "text",
+			"path": "text/an_egg_hit3.asaan"
+		},
+		"an_egg_hit4": {
+			"type": "text",
+			"path": "text/an_egg_hit4.asaan"
+		},
+		"an_egg_hit5": {
+			"type": "text",
+			"path": "text/an_egg_hit5.asaan"
+		},
+		"an_egg_idle": {
+			"type": "text",
+			"path": "text/an_egg_idle.asaan"
+		},
+		"an_face01_hit1": {
+			"type": "text",
+			"path": "text/an_face01_hit1.asaan"
+		},
+		"an_face01_hit2": {
+			"type": "text",
+			"path": "text/an_face01_hit2.asaan"
+		},
+		"an_face01_hit3": {
+			"type": "text",
+			"path": "text/an_face01_hit3.asaan"
+		},
+		"an_face01_hit4": {
+			"type": "text",
+			"path": "text/an_face01_hit4.asaan"
+		},
+		"an_face01_hit5": {
+			"type": "text",
+			"path": "text/an_face01_hit5.asaan"
+		},
+		"an_face01_idle": {
+			"type": "text",
+			"path": "text/an_face01_idle.asaan"
+		},
+		"an_face02_hit1": {
+			"type": "text",
+			"path": "text/an_face02_hit1.asaan"
+		},
+		"an_face02_hit2": {
+			"type": "text",
+			"path": "text/an_face02_hit2.asaan"
+		},
+		"an_face02_hit3": {
+			"type": "text",
+			"path": "text/an_face02_hit3.asaan"
+		},
+		"an_face02_hit4": {
+			"type": "text",
+			"path": "text/an_face02_hit4.asaan"
+		},
+		"an_face02_hit5": {
+			"type": "text",
+			"path": "text/an_face02_hit5.asaan"
+		},
+		"an_face02_idle": {
+			"type": "text",
+			"path": "text/an_face02_idle.asaan"
+		},
+		"an_face03_hit1": {
+			"type": "text",
+			"path": "text/an_face03_hit1.asaan"
+		},
+		"an_face03_hit2": {
+			"type": "text",
+			"path": "text/an_face03_hit2.asaan"
+		},
+		"an_face03_hit3": {
+			"type": "text",
+			"path": "text/an_face03_hit3.asaan"
+		},
+		"an_face03_hit4": {
+			"type": "text",
+			"path": "text/an_face03_hit4.asaan"
+		},
+		"an_face03_hit5": {
+			"type": "text",
+			"path": "text/an_face03_hit5.asaan"
+		},
+		"an_face03_idle": {
+			"type": "text",
+			"path": "text/an_face03_idle.asaan"
+		},
+		"an_face04_hit1": {
+			"type": "text",
+			"path": "text/an_face04_hit1.asaan"
+		},
+		"an_face04_hit2": {
+			"type": "text",
+			"path": "text/an_face04_hit2.asaan"
+		},
+		"an_face04_hit3": {
+			"type": "text",
+			"path": "text/an_face04_hit3.asaan"
+		},
+		"an_face04_hit4": {
+			"type": "text",
+			"path": "text/an_face04_hit4.asaan"
+		},
+		"an_face04_hit5": {
+			"type": "text",
+			"path": "text/an_face04_hit5.asaan"
+		},
+		"an_face04_idle": {
+			"type": "text",
+			"path": "text/an_face04_idle.asaan"
+		},
+		"an_fade_LtoR": {
+			"type": "text",
+			"path": "text/an_fade_LtoR.asaan"
+		},
+		"an_fade_RtoL": {
+			"type": "text",
+			"path": "text/an_fade_RtoL.asaan"
+		},
+		"an_gameclear_gameclear": {
+			"type": "text",
+			"path": "text/an_gameclear_gameclear.asaan"
+		},
+		"an_gameover_gameover": {
+			"type": "text",
+			"path": "text/an_gameover_gameover.asaan"
+		},
+		"an_gion_boko": {
+			"type": "text",
+			"path": "text/an_gion_boko.asaan"
+		},
+		"an_gion_supa": {
+			"type": "text",
+			"path": "text/an_gion_supa.asaan"
+		},
+		"an_hand_left": {
+			"type": "text",
+			"path": "text/an_hand_left.asaan"
+		},
+		"an_hand_rignt": {
+			"type": "text",
+			"path": "text/an_hand_rignt.asaan"
+		},
+		"an_heart_heart2": {
+			"type": "text",
+			"path": "text/an_heart_heart2.asaan"
+		},
+		"an_heart_heart3": {
+			"type": "text",
+			"path": "text/an_heart_heart3.asaan"
+		},
+		"an_hit05_hit5": {
+			"type": "text",
+			"path": "text/an_hit05_hit5.asaan"
+		},
+		"an_hit05_hit_end": {
+			"type": "text",
+			"path": "text/an_hit05_hit_end.asaan"
+		},
+		"an_kira_kira": {
+			"type": "text",
+			"path": "text/an_kira_kira.asaan"
+		},
+		"an_line_line": {
+			"type": "text",
+			"path": "text/an_line_line.asaan"
+		},
+		"an_readygo_readygo": {
+			"type": "text",
+			"path": "text/an_readygo_readygo.asaan"
+		},
+		"an_result_result": {
+			"type": "text",
+			"path": "text/an_result_result.asaan"
+		},
+		"an_suika_hit1": {
+			"type": "text",
+			"path": "text/an_suika_hit1.asaan"
+		},
+		"an_suika_hit2": {
+			"type": "text",
+			"path": "text/an_suika_hit2.asaan"
+		},
+		"an_suika_hit3": {
+			"type": "text",
+			"path": "text/an_suika_hit3.asaan"
+		},
+		"an_suika_hit4": {
+			"type": "text",
+			"path": "text/an_suika_hit4.asaan"
+		},
+		"an_suika_hit5": {
+			"type": "text",
+			"path": "text/an_suika_hit5.asaan"
+		},
+		"an_suika_idle": {
+			"type": "text",
+			"path": "text/an_suika_idle.asaan"
+		},
+		"an_timeout_timeout": {
+			"type": "text",
+			"path": "text/an_timeout_timeout.asaan"
+		},
+		"an_timeup_timeup": {
+			"type": "text",
+			"path": "text/an_timeup_timeup.asaan"
+		},
+		"an_title_title": {
+			"type": "text",
+			"path": "text/an_title_title.asaan"
+		},
+		"an_tv_hit1": {
+			"type": "text",
+			"path": "text/an_tv_hit1.asaan"
+		},
+		"an_tv_hit2": {
+			"type": "text",
+			"path": "text/an_tv_hit2.asaan"
+		},
+		"an_tv_hit3": {
+			"type": "text",
+			"path": "text/an_tv_hit3.asaan"
+		},
+		"an_tv_hit4": {
+			"type": "text",
+			"path": "text/an_tv_hit4.asaan"
+		},
+		"an_tv_hit5": {
+			"type": "text",
+			"path": "text/an_tv_hit5.asaan"
+		},
+		"an_tv_idle": {
+			"type": "text",
+			"path": "text/an_tv_idle.asaan"
+		},
+		"an_wood_hit1": {
+			"type": "text",
+			"path": "text/an_wood_hit1.asaan"
+		},
+		"an_wood_hit2": {
+			"type": "text",
+			"path": "text/an_wood_hit2.asaan"
+		},
+		"an_wood_hit3": {
+			"type": "text",
+			"path": "text/an_wood_hit3.asaan"
+		},
+		"an_wood_hit4": {
+			"type": "text",
+			"path": "text/an_wood_hit4.asaan"
+		},
+		"an_wood_hit5": {
+			"type": "text",
+			"path": "text/an_wood_hit5.asaan"
+		},
+		"an_wood_idle": {
+			"type": "text",
+			"path": "text/an_wood_idle.asaan"
+		},
+		"bn_apple": {
+			"type": "text",
+			"path": "text/bn_apple.asabn"
+		},
+		"bn_banana": {
+			"type": "text",
+			"path": "text/bn_banana.asabn"
+		},
+		"bn_before_the_start": {
+			"type": "text",
+			"path": "text/bn_before_the_start.asabn"
+		},
+		"bn_body": {
+			"type": "text",
+			"path": "text/bn_body.asabn"
+		},
+		"bn_box": {
+			"type": "text",
+			"path": "text/bn_box.asabn"
+		},
+		"bn_combo": {
+			"type": "text",
+			"path": "text/bn_combo.asabn"
+		},
+		"bn_critical": {
+			"type": "text",
+			"path": "text/bn_critical.asabn"
+		},
+		"bn_description": {
+			"type": "text",
+			"path": "text/bn_description.asabn"
+		},
+		"bn_egg": {
+			"type": "text",
+			"path": "text/bn_egg.asabn"
+		},
+		"bn_face01": {
+			"type": "text",
+			"path": "text/bn_face01.asabn"
+		},
+		"bn_face02": {
+			"type": "text",
+			"path": "text/bn_face02.asabn"
+		},
+		"bn_face03": {
+			"type": "text",
+			"path": "text/bn_face03.asabn"
+		},
+		"bn_face04": {
+			"type": "text",
+			"path": "text/bn_face04.asabn"
+		},
+		"bn_fade": {
+			"type": "text",
+			"path": "text/bn_fade.asabn"
+		},
+		"bn_gameclear": {
+			"type": "text",
+			"path": "text/bn_gameclear.asabn"
+		},
+		"bn_gameover": {
+			"type": "text",
+			"path": "text/bn_gameover.asabn"
+		},
+		"bn_gion": {
+			"type": "text",
+			"path": "text/bn_gion.asabn"
+		},
+		"bn_hand": {
+			"type": "text",
+			"path": "text/bn_hand.asabn"
+		},
+		"bn_heart": {
+			"type": "text",
+			"path": "text/bn_heart.asabn"
+		},
+		"bn_hit05": {
+			"type": "text",
+			"path": "text/bn_hit05.asabn"
+		},
+		"bn_kira": {
+			"type": "text",
+			"path": "text/bn_kira.asabn"
+		},
+		"bn_line": {
+			"type": "text",
+			"path": "text/bn_line.asabn"
+		},
+		"bn_readygo": {
+			"type": "text",
+			"path": "text/bn_readygo.asabn"
+		},
+		"bn_result": {
+			"type": "text",
+			"path": "text/bn_result.asabn"
+		},
+		"bn_suika": {
+			"type": "text",
+			"path": "text/bn_suika.asabn"
+		},
+		"bn_timeout": {
+			"type": "text",
+			"path": "text/bn_timeout.asabn"
+		},
+		"bn_timeup": {
+			"type": "text",
+			"path": "text/bn_timeup.asabn"
+		},
+		"bn_title": {
+			"type": "text",
+			"path": "text/bn_title.asabn"
+		},
+		"bn_tv": {
+			"type": "text",
+			"path": "text/bn_tv.asabn"
+		},
+		"bn_wood": {
+			"type": "text",
+			"path": "text/bn_wood.asabn"
+		},
+		"json_difficultyParameters": {
+			"type": "text",
+			"path": "text/json_difficultyParameters.json"
+		},
+		"json_num_result": {
+			"type": "text",
+			"path": "text/json_num_result.json"
+		},
+		"json_numbers_n": {
+			"type": "text",
+			"path": "text/json_numbers_n.json"
+		},
+		"json_numbers_n_red": {
+			"type": "text",
+			"path": "text/json_numbers_n_red.json"
+		},
+		"json_wg_num": {
+			"type": "text",
+			"path": "text/json_wg_num.json"
+		},
+		"json_wg_num_cb_json": {
+			"type": "text",
+			"path": "text/json_wg_num_cb_json.json"
+		},
+		"json_wg_ui": {
+			"type": "text",
+			"path": "text/json_wg_ui.json"
+		},
+		"pj_before_the_start": {
+			"type": "text",
+			"path": "text/pj_before_the_start.asapj",
+			"global": true
+		},
+		"pj_nw_common": {
+			"type": "text",
+			"path": "text/pj_nw_common.asapj",
+			"global": true
+		},
+		"pj_nw_title": {
+			"type": "text",
+			"path": "text/pj_nw_title.asapj",
+			"global": true
+		},
+		"pj_wg_combo": {
+			"type": "text",
+			"path": "text/pj_wg_combo.asapj",
+			"global": true
+		},
+		"pj_wg_ef": {
+			"type": "text",
+			"path": "text/pj_wg_ef.asapj",
+			"global": true
+		},
+		"pj_wg_face": {
+			"type": "text",
+			"path": "text/pj_wg_face.asapj",
+			"global": true
+		},
+		"pj_wg_hand": {
+			"type": "text",
+			"path": "text/pj_wg_hand.asapj",
+			"global": true
+		},
+		"pj_wg_item": {
+			"type": "text",
+			"path": "text/pj_wg_item.asapj",
+			"global": true
+		},
+		"sk_before_the_start": {
+			"type": "text",
+			"path": "text/sk_before_the_start.asask"
+		},
+		"sk_description_text": {
+			"type": "text",
+			"path": "text/sk_description_text.asask"
+		},
+		"sk_nw_common": {
+			"type": "text",
+			"path": "text/sk_nw_common.asask"
+		},
+		"sk_nw_title": {
+			"type": "text",
+			"path": "text/sk_nw_title.asask"
+		},
+		"sk_title_logo": {
+			"type": "text",
+			"path": "text/sk_title_logo.asask"
+		},
+		"sk_wg_combo": {
+			"type": "text",
+			"path": "text/sk_wg_combo.asask"
+		},
+		"sk_wg_ef": {
+			"type": "text",
+			"path": "text/sk_wg_ef.asask"
+		},
+		"sk_wg_face": {
+			"type": "text",
+			"path": "text/sk_wg_face.asask"
+		},
+		"sk_wg_hand": {
+			"type": "text",
+			"path": "text/sk_wg_hand.asask"
+		},
+		"sk_wg_item1": {
+			"type": "text",
+			"path": "text/sk_wg_item1.asask"
+		},
+		"sk_wg_item2": {
+			"type": "text",
+			"path": "text/sk_wg_item2.asask"
+		},
+		"sk_wg_item3": {
+			"type": "text",
+			"path": "text/sk_wg_item3.asask"
+		},
+		"bgm_BGM001_BPM154_2": {
+			"type": "audio",
+			"path": "audio/bgm/bgm_BGM001_BPM154_2/bgm_BGM001_BPM154_2",
+			"systemId": "music",
+			"duration": 12469
+		},
+		"se_No8_RollCount2": {
+			"type": "audio",
+			"path": "audio/common/se_No8_RollCount2/se_No8_RollCount2",
+			"systemId": "sound",
+			"duration": 3995
+		},
+		"se_No8_RollCount_Finish": {
+			"type": "audio",
+			"path": "audio/common/se_No8_RollCount_Finish/se_No8_RollCount_Finish",
+			"systemId": "sound",
+			"duration": 665
+		},
+		"se_ready_start": {
+			"type": "audio",
+			"path": "audio/common/se_ready_start/se_ready_start",
+			"systemId": "sound",
+			"duration": 1701
+		},
+		"se_timeup": {
+			"type": "audio",
+			"path": "audio/common/se_timeup/se_timeup",
+			"systemId": "sound",
+			"duration": 1080
+		},
+		"se_attack08": {
+			"type": "audio",
+			"path": "audio/se/se_attack08/se_attack08",
+			"systemId": "sound",
+			"duration": 972
+		},
+		"se_comedy08": {
+			"type": "audio",
+			"path": "audio/se/se_comedy08/se_comedy08",
+			"systemId": "sound",
+			"duration": 1800
+		},
+		"se_comedy14": {
+			"type": "audio",
+			"path": "audio/se/se_comedy14/se_comedy14",
+			"systemId": "sound",
+			"duration": 250
+		},
+		"se_crush05": {
+			"type": "audio",
+			"path": "audio/se/se_crush05/se_crush05",
+			"systemId": "sound",
+			"duration": 591
+		},
+		"se_other02": {
+			"type": "audio",
+			"path": "audio/se/se_other02/se_other02",
+			"systemId": "sound",
+			"duration": 1301
+		},
+		"se_other05": {
+			"type": "audio",
+			"path": "audio/se/se_other05/se_other05",
+			"systemId": "sound",
+			"duration": 901
+		},
+		"se_putItem": {
+			"type": "audio",
+			"path": "audio/se/se_putItem/se_putItem",
+			"systemId": "sound",
+			"duration": 2000
+		},
+		"se_rareItem": {
+			"type": "audio",
+			"path": "audio/se/se_rareItem/se_rareItem",
+			"systemId": "sound",
+			"duration": 4000
+		}
+	},
+	"globalScripts": [
+		"node_modules/@akashic-extension/akashic-animation/lib/AABB.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Actor.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/AnimationHandlerParams.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/AnimeParams.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Attachment.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/AttrId.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Bone.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/BoneCellCollider.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/BoneSet.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/BoxVolume.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Cell.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/CellAttachment.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/CellAttachmentCollider.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/CircleCollider.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/CircleVolume.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Collider.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Container.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/FinalizedCell.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Posture.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Resource.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Size2.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Skeleton.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Skin.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/Vector2.js",
+		"node_modules/@akashic-extension/akashic-animation/lib/index.js",
+		"node_modules/@akashic-extension/akashic-timeline/lib/ActionType.js",
+		"node_modules/@akashic-extension/akashic-timeline/lib/Easing.js",
+		"node_modules/@akashic-extension/akashic-timeline/lib/Timeline.js",
+		"node_modules/@akashic-extension/akashic-timeline/lib/Tween.js",
+		"node_modules/@akashic-extension/akashic-timeline/lib/index.js"
+	],
+	"moduleMainScripts": {
+		"@akashic-extension/akashic-animation": "node_modules/@akashic-extension/akashic-animation/lib/index.js",
+		"@akashic-extension/akashic-timeline": "node_modules/@akashic-extension/akashic-timeline/lib/index.js"
+	},
+	"environment": {
+		"niconico": {
+			"supportedModes": [
+				"single",
+				"ranking"
+			]
+		}
+	}
+}

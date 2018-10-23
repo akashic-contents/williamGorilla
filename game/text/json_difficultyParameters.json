@@ -1,0 +1,27 @@
+﻿{
+	"difficultyParameterList": [
+		{
+			"minimumDifficulty": 1,
+			"gaugeSpeed":6,
+			"gaugeSpeedAdd":[1,0,0,2,3,4,6]
+		},
+		{
+			"minimumDifficulty": 3,
+			"gaugeSpeed":7,
+			"gaugeSpeedAdd":[1,-1,0,2,4,5,7]
+		},
+		{
+			"minimumDifficulty": 5
+		},
+		{
+			"minimumDifficulty": 7,
+			"gaugeSpeed":12,
+			"gaugeSpeedAdd":[3,1,2,5,8,10,12]
+		},
+		{
+			"minimumDifficulty": 9,
+			"gaugeSpeed":20,
+			"gaugeSpeedAdd":[3,1,2,5,8,10,12]
+		}
+	]
+}
