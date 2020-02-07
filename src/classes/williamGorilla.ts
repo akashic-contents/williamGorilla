@@ -182,8 +182,6 @@ export class WilliamGorilla extends GameBase {
 			if (this.timeLimit > define.GAME_TIME_MAX) {
 				this.timeLimit = define.GAME_TIME_MAX;
 			}
-		} else if (CommonParameterReader.useGameTimeMax) {
-			this.timeLimit = define.GAME_TIME_MAX;
 		}
 
 		// パラメータで制限時間が変更された場合の対応
