@@ -90,7 +90,7 @@ export class CommonParameterReader {
 			this.muteAudio = parameters.muteAudio;
 		}
 		// console.log("read: muteAudio:" + this.muteAudio + ".");
-		if (typeof parameters.totalTimeLimit  === "number") {
+		if (typeof parameters.totalTimeLimit === "number") {
 			this.useGameTimeLimit = true;
 			// totalTimeLimitはゲーム全体で使う時間なのでゲームシーン以外で消費する時間分引く必要がある
 			this.gameTimeLimit = Math.max(0, <number>parameters.totalTimeLimit - TIME_EXPECT_GAME_SCENE);
