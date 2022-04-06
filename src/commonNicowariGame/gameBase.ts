@@ -106,7 +106,7 @@ export abstract class GameBase extends g.E {
 	 * ゲーム画面に遷移したあとReady～Startジングルの前に呼ばれ、
 	 * ゲーム前ガイド表示を開始する。
 	 * ゲーム前ガイド表示を行わない場合はfalseを返す。
-	 * trueを返すとonUpdatePreGameGuideが呼ばれるようになる。
+	 * trueを返すとhandleUpdatePreGameGuideが呼ばれるようになる。
 	 * @return {boolean} ゲーム前ガイド表示を行わない場合はfalse
 	 */
 	startPreGameGuide(): boolean {
@@ -144,7 +144,7 @@ export abstract class GameBase extends g.E {
 	 * Ready～Startジングルが開始される。
 	 * @return {boolean} ゲーム前ガイド表示を終了する場合はtrue
 	 */
-	onUpdatePreGameGuide(): boolean {
+	handleUpdatePreGameGuide(): boolean {
 		return true;
 	}
 
@@ -152,5 +152,5 @@ export abstract class GameBase extends g.E {
 	 * Scene#updateを起点とする処理から呼ばれるメソッド
 	 * ゲーム画面でない期間には呼ばれない。
 	 */
-	abstract onUpdate(): void;
+	abstract handleUpdate(): void;
 }

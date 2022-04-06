@@ -138,17 +138,10 @@ export namespace gameUtil {
 	/**
 	 * AssetInfoの情報からBitmapFontを生成する
 	 * @param _info   アセット情報
-	 * @param _assets (optional)g.Assetのマップ
-	 * （省略時はg.game.scene().assetsを使用する）
 	 * @return         生成したBitmapFont
 	 */
-	export function createNumFontWithAssetInfo(
-		_info: AssetInfoType, opt_assets?: AssetMapType): g.BitmapFont {
-		if (!opt_assets) {
-			opt_assets = g.game.scene().assets;
-		}
-		const frameMap: SpriteFrameMap = JSON.parse(
-			(<g.TextAsset>opt_assets[_info.json]).data);
+	export function createNumFontWithAssetInfo(_info: AssetInfoType): g.BitmapFont {
+		const frameMap: SpriteFrameMap = g.game.scene().asset.getJSONContentById(_info.json);
 		const glyphMap = gameUtil.makeGlyphMapFromFrames(
 			CHAR_CODE_0, CHAR_CODE_10, frameMap, _info.numFrames);
 		if (_info.nonnumFrames) {
@@ -169,9 +162,13 @@ export namespace gameUtil {
 				height: frame.h
 			};
 		}
-		const font = new g.BitmapFont(
-			opt_assets[_info.img], glyphMap, _info.fontWidth,
-			_info.fontHeight, missingGlyph);
+		const font = new g.BitmapFont({
+			src: g.game.scene().asset.getImageById(_info.img),
+			map: glyphMap,
+			defaultGlyphWidth: _info.fontWidth,
+			defaultGlyphHeight: _info.fontHeight,
+			missingGlyph
+		});
 		return font;
 	}
 
@@ -304,15 +301,15 @@ export namespace gameUtil {
 	 * ゼロ以上で指定した最大値未満のランダムな整数を返す
 	 * @param _max       最大値
 	 * @param opt_random (optional)RandomGeneratorインスタンス
-	 * （省略時はg.game.random[0]を使用する）
+	 * （省略時はg.game.randomを使用する）
 	 * @return           ランダムな整数
 	 */
 	export function getRandomLessThanMax(
 		_max: number, opt_random?: g.RandomGenerator): number {
 		if (!opt_random) {
-			opt_random = g.game.random[0];
+			opt_random = g.game.random;
 		}
-		return (opt_random.get(0, (_max * 1000) - 1) / 1000) | 0;
+		return Math.floor(opt_random.generate() * _max);
 	}
 
 	/**
@@ -372,12 +369,12 @@ export namespace gameUtil {
 	 * 配列をシャッフルして新しい配列を返す
 	 * @param _array     シャッフルする配列
 	 * @param opt_random (optional)RandomGeneratorインスタンス
-	 * （省略時はg.game.random[0]を使用する）
+	 * （省略時はg.game.randomを使用する）
 	 * @return           シャッフルされた配列
 	 */
 	export function shuffle<T>(_array: Array<T>, opt_random?: g.RandomGenerator): Array<T> {
 		if (!opt_random) {
-			opt_random = g.game.random[0];
+			opt_random = g.game.random;
 		}
 		const copyArray = _array.slice();
 		let m: number = copyArray.length;
