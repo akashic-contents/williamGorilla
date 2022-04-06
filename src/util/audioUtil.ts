@@ -70,7 +70,7 @@ export namespace audioUtil {
 		}
 		const asset: g.AudioAsset = g.game.scene().asset.getAudioById(_soundId);
 		if (!asset) {
-			console.error("AudioUtil.inUse: not found " + _soundId + " in opt_assets.");
+			console.error("AudioUtil.inUse: not found " + _soundId + " in assets.");
 			return false;
 		}
 		return asset.inUse();
@@ -90,7 +90,7 @@ export namespace audioUtil {
 		}
 		const asset: g.AudioAsset = g.game.scene().asset.getAudioById(_soundId);
 		if (!asset) {
-			console.error("AudioUtil.play: not found " + _soundId + " in opt_assets.");
+			console.error("AudioUtil.play: not found " + _soundId + " in assets.");
 			return null;
 		}
 		const info = getPlayingAudioInfo(asset);
@@ -111,7 +111,7 @@ export namespace audioUtil {
 		}
 		const asset: g.AudioAsset = g.game.scene().asset.getAudioById(_soundId);
 		if (!asset) {
-			console.error("AudioUtil.stop: not found " + _soundId + " in opt_assets.");
+			console.error("AudioUtil.stop: not found " + _soundId + " in assets.");
 			return;
 		}
 		const info = getPlayingAudioInfo(asset);
@@ -131,7 +131,7 @@ export namespace audioUtil {
 		}
 		const asset: g.AudioAsset = g.game.scene().asset.getAudioById(_soundId);
 		if (!asset) {
-			console.error("AudioUtil.getDuration: not found " + _soundId + " in opt_assets.");
+			console.error("AudioUtil.getDuration: not found " + _soundId + " in assets.");
 			return 0;
 		}
 		return asset.duration;
@@ -142,7 +142,6 @@ export namespace audioUtil {
 	 * SEのようなループさせない音声に対しての使用を想定しており、
 	 * BGMのようなループする音声に対する使用は非推奨
 	 * @param _soundId   対象の音声アセット名
-	 * @param opt_assets (optional)g.Assetのマップ
 	 * @return           再生中ならtrue
 	 */
 	export function isPlaying(_soundId: string): boolean {
@@ -151,7 +150,7 @@ export namespace audioUtil {
 		}
 		const asset: g.AudioAsset = g.game.scene().asset.getAudioById(_soundId);
 		if (!asset) {
-			console.error("AudioUtil.isPlaying: not found " + _soundId + " in opt_assets.");
+			console.error("AudioUtil.isPlaying: not found " + _soundId + " in assets.");
 			return false;
 		}
 		const info = getPlayingAudioInfo(asset);

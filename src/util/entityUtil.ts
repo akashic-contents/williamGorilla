@@ -91,7 +91,7 @@ export namespace entityUtil {
 	 * @param  _text       Labelに初期設定する文字列
 	 * @param  _bitmapFont 使用するBitmapFont
 	 * @param  _maxLength  想定する桁数
-	 * @param  _align      設定するTextAlign
+	 * @param  _align      設定するTextAlignString
 	 * @return             生成したLabel
 	 */
 	export function createLabel(
