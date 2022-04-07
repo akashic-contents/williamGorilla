@@ -1,5 +1,4 @@
 import * as tl from "@akashic-extension/akashic-timeline";
-import { BitmapFont } from "@akashic/akashic-engine";
 import { commonDefine } from "../common/commonDefine";
 import { AssetInfoType } from "../commonTypes/assetInfoType";
 import { entityUtil } from "../util/entityUtil";
@@ -93,7 +92,7 @@ export class TimerLabel extends g.E {
 
 		// 点滅時の拡大基準点
 		const label = this.labelBlack;
-		const font = label.font as BitmapFont;
+		const font = label.font as g.BitmapFont;
 		const pivotX = _x + (font.defaultGlyphWidth / 2);
 		const pivotY = _y + (font.defaultGlyphHeight / 2);
 		entityUtil.setXY(this.scaleLayer, pivotX, pivotY);

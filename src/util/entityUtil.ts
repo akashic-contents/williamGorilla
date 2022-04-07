@@ -1,4 +1,3 @@
-import { BitmapFont } from "@akashic/akashic-engine";
 
 /**
  * g.Eとそのサブクラス（g.Spriteを除く）を扱うユーティリティ関数群
@@ -135,7 +134,7 @@ export namespace entityUtil {
 	 * @param  _y     右端の数字の左上のy座標
 	 */
 	export function moveNumLabelTo(_label: g.Label, _x: number, _y: number): void {
-		const bitmapFont = _label.font as BitmapFont;
+		const bitmapFont = _label.font as g.BitmapFont;
 		_label.x = _x + bitmapFont.defaultGlyphWidth - _label.width;
 		_label.y = _y;
 		_label.modified();
