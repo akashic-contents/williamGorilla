@@ -150,9 +150,6 @@ export class ResultSubscene extends Subscene {
 		let value = this.scoreValue;
 		const len = String(value).length;
 		if (this.isRolling) { // 回転中はスコア桁内でランダム
-			// value = this.scene.game.random[0].get(
-			// 	Math.pow(10, len - 1),
-			// 	Math.pow(10, len) - 1);
 			const min = Math.pow(10, len - 1);
 			const max = Math.pow(10, len) - 1;
 			value = Math.floor(this.scene.game.random.generate() * (max - min) + min);
