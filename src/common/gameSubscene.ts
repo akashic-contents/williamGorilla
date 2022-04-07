@@ -109,7 +109,7 @@ export class GameSubscene extends Subscene {
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれる
+	 * Scene#onUpdateを起点とする処理から呼ばれる
 	 * @override
 	 */
 	handleUpdate(): void {

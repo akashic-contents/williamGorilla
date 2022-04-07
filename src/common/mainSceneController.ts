@@ -138,8 +138,8 @@ export class MainSceneController extends SceneController {
 	}
 
 	/**
-	 * Scene#loadedのハンドラ
-	 * handleUpdateを呼ぶScene#updateのハンドラをこの中で登録する
+	 * Scene#onLoadのハンドラ
+	 * handleUpdateを呼ぶScene#onUpdateのハンドラをこの中で登録する
 	 * @param {g.Scene} _scene 処理対象のScene
 	 * @return {boolean} 通常trueを返し、ハンドラ登録を解除する
 	 * @override
@@ -229,7 +229,7 @@ export class MainSceneController extends SceneController {
 	}
 
 	/**
-	 * Scene#updateのハンドラ
+	 * Scene#onUpdateのハンドラ
 	 * @param {g.Scene} _scene 処理対象のScene
 	 * @return {boolean} 通常falseを返す
 	 * @override

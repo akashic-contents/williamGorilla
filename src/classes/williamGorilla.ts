@@ -69,7 +69,7 @@ export class WilliamGorilla extends GameBase {
 
 	/**
 	 * このクラスで使用するオブジェクトを生成するメソッド
-	 * Scene#loadedを起点とする処理からコンストラクタの直後に呼ばれる。
+	 * Scene#onLoadを起点とする処理からコンストラクタの直後に呼ばれる。
 	 * このクラスはゲーム画面終了時も破棄されず、次のゲームで再利用される。
 	 * そのためゲーム状態の初期化はinitではなくshowContentで行う必要がある。
 	 * @override
@@ -231,7 +231,7 @@ export class WilliamGorilla extends GameBase {
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれるメソッド
+	 * Scene#onUpdateを起点とする処理から呼ばれるメソッド
 	 * ゲーム画面でない期間には呼ばれない。
 	 * @override
 	 */
