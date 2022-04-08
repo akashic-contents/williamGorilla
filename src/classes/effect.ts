@@ -36,11 +36,9 @@ export class Effect extends g.E {
 		const actor: asaEx.Actor = new asaEx.Actor(this.scene, AsaInfo.ef.pj);
 		entityUtil.setXY(actor, centerW, centerH);
 		this.actorGion = actor;
-		this.actorGion.ended.handle(this, (): void => {
-			this.scene.setTimeout(1, this, (): void => {
-				entityUtil.hideEntity(this.actorGion);
-			});
-		});
+		this.actorGion.ended.add((): void => {
+			this.scene.setTimeout((): void => { entityUtil.hideEntity(this.actorGion); }, 1, this);
+		}, this);
 		this.append(this.actorGion);
 		entityUtil.hideEntity(this.actorGion);
 
@@ -102,7 +100,7 @@ export class Effect extends g.E {
 	/**
 	 * 毎フレームの更新処理
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		this.actorGion.modified();
 		this.actorGion.calc();
 		this.actorKira.modified();

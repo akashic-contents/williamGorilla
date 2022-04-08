@@ -32,7 +32,7 @@ export class ComboAdder extends g.E {
 		// 生成して非表示にしておく
 		const actor: asaEx.Actor = new asaEx.Actor(this.scene, AsaInfo.combo.pj);
 		entityUtil.setXY(actor, define.UI_COMBO_X, define.UI_COMBO_Y);
-		actor.update.handle(() => {
+		actor.onUpdate.add(() => {
 			actor.modified();
 			actor.calc();
 		});
@@ -44,9 +44,9 @@ export class ComboAdder extends g.E {
 		const comboDigit: number = define.GET_POINT_DIGIT;
 		const fontCombo = gameUtil.createNumFontWithAssetInfo(AssetInfo.numCombo);
 		this.comboLabel = entityUtil.createLabel(
-			this.scene, "00", fontCombo, comboDigit, g.TextAlign.Left);
+			this.scene, "00", fontCombo, comboDigit, "left");
 		entityUtil.appendEntity(this.comboLabel, this.comboActor);
-		this.comboLabel.update.handle(() => {
+		this.comboLabel.onUpdate.add(() => {
 			const pos: g.CommonOffset = this.comboActor.getBonePosition(this.pointName);
 			pos.x = pos.x + (AssetInfo.numCombo.fontWidth * 3);
 			pos.y = pos.y + 1.5;

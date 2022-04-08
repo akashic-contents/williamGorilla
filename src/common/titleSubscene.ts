@@ -45,7 +45,7 @@ export class TitleSubscene extends Subscene {
 			new asaEx.Actor(this.scene, CommonAsaInfo.nwTitle.pj);
 		title.x = game.width / 2;
 		title.y = game.height / 2;
-		title.update.handle(spriteUtil.makeActorUpdater(title));
+		title.onUpdate.add(spriteUtil.makeActorUpdater(title));
 		title.hide();
 		entityUtil.appendEntity(title, this);
 
@@ -96,23 +96,20 @@ export class TitleSubscene extends Subscene {
 		this.asaTitle.play(CommonAsaInfo.nwTitle.anim.title, 0, false, 1);
 		entityUtil.showEntity(this.asaTitle);
 		if (this.autoNext) {
-			this.scene.setTimeout(
-				commonDefine.TITLE_WAIT, this, this.onTimeout);
+			this.scene.setTimeout(this.handleTimeout, commonDefine.TITLE_WAIT, this);
 			if (commonDefine.TOUCH_SKIP_WAIT > 0) {
-				this.scene.setTimeout(
-					commonDefine.TOUCH_SKIP_WAIT, this,
-					this.onTimeoutToTouch);
+				this.scene.setTimeout(this.handleTimeoutToTouch, commonDefine.TOUCH_SKIP_WAIT, this);
 			}
 		} else {
-			this.asaTitle.ended.handle(this, this.onTitleEnd);
+			this.asaTitle.ended.add(this.handleTitleEnd, this);
 		}
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれる
+	 * Scene#onUpdateを起点とする処理から呼ばれる
 	 * @override
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		// NOP
 	}
 
@@ -124,7 +121,7 @@ export class TitleSubscene extends Subscene {
 	stopContent(): void {
 		// console.log("TitleSubscene.stopContent: inContent:"+this.inContent+".");
 		this.inContent = false;
-		this.scene.pointDownCapture.removeAll(this);
+		this.scene.onPointDownCapture.removeAll({ owner: this });
 	}
 
 	/**
@@ -142,8 +139,8 @@ export class TitleSubscene extends Subscene {
 	 * Scene#setTimeoutのハンドラ
 	 * 次のシーンへの遷移を要求する
 	 */
-	private onTimeout(): void {
-		// console.log("TitleSubscene.onTimeout: inContent:"+this.inContent+".");
+	private handleTimeout(): void {
+		// console.log("TitleSubscene.handleTimeout: inContent:"+this.inContent+".");
 		if (this.inContent) {
 			this.requestedNextSubscene.fire();
 		}
@@ -153,10 +150,10 @@ export class TitleSubscene extends Subscene {
 	 * Scene#setTimeoutのハンドラ
 	 * タッチ受付を開始する
 	 */
-	private onTimeoutToTouch(): void {
-		// console.log("TitleSubscene.onTimeoutToTouch: inContent:"+this.inContent+".");
+	private handleTimeoutToTouch(): void {
+		// console.log("TitleSubscene.handleTimeoutToTouch: inContent:"+this.inContent+".");
 		if (this.inContent) {
-			this.scene.pointDownCapture.handle(this, this.onTouch);
+			this.scene.onPointDownCapture.add(this.handleTouch, this);
 		}
 	}
 
@@ -165,21 +162,21 @@ export class TitleSubscene extends Subscene {
 	 * タイトルロゴアニメの終了時用
 	 * @return {boolean} trueを返し、ハンドラ登録を解除する
 	 */
-	private onTitleEnd(): boolean {
+	private handleTitleEnd(): boolean {
 		if (this.inContent) {
-			this.scene.pointDownCapture.handle(this, this.onTouch);
+			this.scene.onPointDownCapture.add(this.handleTouch, this);
 		}
 		return true;
 	}
 
 	/**
-	 * Scene#pointDownCaptureのハンドラ
+	 * Scene#onPointDownCaptureのハンドラ
 	 * 次のシーンへの遷移を要求する
 	 * @param {g.PointDownEvent} e イベントパラメータ
 	 * @return {boolean} trueを返し、ハンドラ登録を解除する
 	 */
-	private onTouch(_e: g.PointDownEvent): boolean {
-		// console.log("TitleSubscene.onTouch: inContent:"+this.inContent+".");
+	private handleTouch(_e: g.PointDownEvent): boolean {
+		// console.log("TitleSubscene.handleTouch: inContent:"+this.inContent+".");
 		if (this.inContent) {
 			this.requestedNextSubscene.fire();
 		}

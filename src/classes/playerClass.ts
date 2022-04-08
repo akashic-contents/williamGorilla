@@ -142,7 +142,7 @@ export class PlayerClass extends g.E {
 	 * @param {number} _level     割る力のレベル
 	 * @param {number} _lifeValue 残りライフ
 	 */
-	onTap(_level: number, _lifeValue: number): void {
+	handleTap(_level: number, _lifeValue: number): void {
 		this.setBodyAnim(this.CRUSH); // 割る
 		// 右腕:アニメ再生1回
 		this.setRightAnim();
@@ -156,7 +156,7 @@ export class PlayerClass extends g.E {
 	/**
 	 * 毎フレームの更新処理
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		if (this.isPutStart === true) {
 			// 左腕（アイテムを置く）アニメが頭の上まで進んだ時
 			if (this.leftHand.currentFrame === define.ARM_HIT_FRAME) {
@@ -182,7 +182,7 @@ export class PlayerClass extends g.E {
 				}
 			}
 		}
-		this.item.onUpdate();
+		this.item.handleUpdate();
 		this.face.modified();
 		this.face.calc();
 		this.leftHand.modified();
@@ -257,7 +257,7 @@ export class PlayerClass extends g.E {
 			table[i] = total; // 抽選用テーブルを作る
 		}
 		// アイテム種類抽選
-		const param = this.scene.game.random[0].get(0, total);
+		const param = Math.floor(this.scene.game.random.generate() * total);
 		for (kind = 0; kind < _kindSeed; ++kind) {
 			if (param <= table[kind]) {
 				break;

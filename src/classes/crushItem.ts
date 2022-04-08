@@ -26,11 +26,9 @@ export class CrushItem extends g.E {
 	init(): void {
 		const itemActor = new asaEx.Actor(this.scene, AsaInfo.item.pj);
 		entityUtil.setXY(itemActor, define.ITEM_X, define.ITEM_Y);
-		itemActor.ended.handle(this, (): void => {
-			this.scene.setTimeout(1, this, (): void => {
-				entityUtil.hideEntity(this.actor);
-			});
-		});
+		itemActor.ended.add((): void => {
+			this.scene.setTimeout((): void => { entityUtil.hideEntity(this.actor); }, 1, this);
+		}, this);
 		this.actor = itemActor;
 
 		entityUtil.hideEntity(this.actor);
@@ -70,7 +68,7 @@ export class CrushItem extends g.E {
 	/**
 	 * 毎フレームの更新処理
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		// 更新
 		this.actor.modified();
 		this.actor.calc();

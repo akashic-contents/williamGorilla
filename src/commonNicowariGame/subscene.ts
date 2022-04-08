@@ -24,9 +24,9 @@ export abstract class Subscene extends g.E {
 	abstract startContent(): void;
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれる
+	 * Scene#onUpdateを起点とする処理から呼ばれる
 	 */
-	abstract onUpdate(): void;
+	abstract handleUpdate(): void;
 
 	/**
 	 * 動作を停止する

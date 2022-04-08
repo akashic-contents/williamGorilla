@@ -53,7 +53,7 @@ export class Arrow extends g.E {
 	 * @param  {number} _kind アイテム種類
 	 * @return {number}       割る力のレベル
 	 */
-	onTap(_kind: number): number {
+	handleTap(_kind: number): number {
 		// 力の強さ
 		const strength: number = this.getArrowPosition();
 		// アイテム種類と力を比較して割るレベルを算出
@@ -108,7 +108,7 @@ export class Arrow extends g.E {
 	/**
 	 * 毎フレームの更新処理
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		if (this.dy !== 0) {
 			// ゲージの座標移動
 			this.arrowIcon.y += this.dy;

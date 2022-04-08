@@ -69,7 +69,7 @@ export class WilliamGorilla extends GameBase {
 
 	/**
 	 * このクラスで使用するオブジェクトを生成するメソッド
-	 * Scene#loadedを起点とする処理からコンストラクタの直後に呼ばれる。
+	 * Scene#onLoadを起点とする処理からコンストラクタの直後に呼ばれる。
 	 * このクラスはゲーム画面終了時も破棄されず、次のゲームで再利用される。
 	 * そのためゲーム状態の初期化はinitではなくshowContentで行う必要がある。
 	 * @override
@@ -194,9 +194,8 @@ export class WilliamGorilla extends GameBase {
 		}
 
 		this.timerLabel.setTimeCount(this.timeLimit);
-		this.timerLabel.timeCaution.handle(this, this.onTimeCaution);
-		this.timerLabel.timeCautionCancel.handle(
-			this, this.onTimeCautionCancel);
+		this.timerLabel.timeCaution.add(this.handleTimeCaution, this);
+		this.timerLabel.timeCautionCancel.add(this.handleTimeCautionCancel, this);
 		// ゲーム初期化
 		this.player.gameReset();
 		this.arrow.resetPosition();
@@ -212,7 +211,7 @@ export class WilliamGorilla extends GameBase {
 	 */
 	startGame(): void {
 		this.inGame = true;
-		this.scene.pointDownCapture.handle(this, this.onTouch);
+		this.scene.onPointDownCapture.add(this.handleTouch, this);
 
 		this.arrow.start();
 		// 初回はりんご固定
@@ -226,28 +225,28 @@ export class WilliamGorilla extends GameBase {
 	 * @override
 	 */
 	hideContent(): void {
-		this.timerLabel.timeCaution.removeAll(this);
-		this.timerLabel.timeCautionCancel.removeAll(this);
+		this.timerLabel.timeCaution.removeAll({ owner: this });
+		this.timerLabel.timeCautionCancel.removeAll({ owner: this });
 		super.hideContent();
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれるメソッド
+	 * Scene#onUpdateを起点とする処理から呼ばれるメソッド
 	 * ゲーム画面でない期間には呼ばれない。
 	 * @override
 	 */
-	onUpdate(): void {
+	handleUpdate(): void {
 		if (this.inGame) {
-			this.score.onUpdate();
+			this.score.handleUpdate();
 			this.timerLabel.tick();
 			if (this.timerLabel.getTimeCount() === 0) {
 				this.player.gameEnd();
 				this.effect.endAnim();
 				this.finishGame();
 			} else {
-				this.player.onUpdate();
-				this.arrow.onUpdate();
-				this.effect.onUpdate();
+				this.player.handleUpdate();
+				this.arrow.handleUpdate();
+				this.effect.handleUpdate();
 
 				// for debug
 				if (DEBUG_AUTO_OK) { // 自動OK
@@ -255,7 +254,15 @@ export class WilliamGorilla extends GameBase {
 					const itemKind = this.player.getItemKind();
 					if (arrowPos > define.ITEM_GAUGE_SCALE[itemKind][define.PowerLevel.LEVEL_SOFT] &&
 						arrowPos <= define.ITEM_GAUGE_SCALE[itemKind][define.PowerLevel.LEVEL_OK_MAX]) {
-						this.scene.pointDownCapture.fire();
+						this.scene.onPointDownCapture.fire({
+							type: "point-down",
+							eventFlags: 2,
+							local: false,
+							player: { id: "dummy" },
+							point: { x: 100, y: 100},
+							pointerId: 1,
+							target: undefined
+						});
 					}
 				}
 			}
@@ -285,14 +292,14 @@ export class WilliamGorilla extends GameBase {
 	/**
 	 * TimerLabel#timeCautionのハンドラ
 	 */
-	private onTimeCaution(): void {
+	private handleTimeCaution(): void {
 		this.timeCaution.fire();
 	}
 
 	/**
 	 * TimerLabel#timeCautionCancelのハンドラ
 	 */
-	private onTimeCautionCancel(): void {
+	private handleTimeCautionCancel(): void {
 		this.timeCautionCancel.fire();
 	}
 
@@ -304,8 +311,8 @@ export class WilliamGorilla extends GameBase {
 	 */
 	private finishGame(opt_isLifeZero: boolean = false): void {
 		this.inGame = false;
-		this.scene.pointDownCapture.removeAll(this);
-		this.score.onFinishGame();
+		this.scene.onPointDownCapture.removeAll({ owner: this });
+		this.score.handleFinishGame();
 		gameUtil.setGameScore(this.scoreValue);
 		// 呼び出すトリガーによって共通フローのジングルアニメが変化する
 		if (opt_isLifeZero) {
@@ -318,11 +325,11 @@ export class WilliamGorilla extends GameBase {
 	}
 
 	/**
-	 * Scene#pointDownCaptureのハンドラ
+	 * Scene#onPointDownCaptureのハンドラ
 	 * @param {g.PointDownEvent} _e イベントパラメータ
 	 * @return {boolean}            ゲーム終了時はtrueを返す
 	 */
-	private onTouch(_e: g.PointDownEvent): boolean {
+	private handleTouch(_e: g.PointDownEvent): boolean {
 		if (!this.inGame) {
 			return true;
 		}
@@ -346,9 +353,9 @@ export class WilliamGorilla extends GameBase {
 		// アイテム種類
 		const kind = this.player.getItemKind();
 		// 叩いた力のレベル
-		const level = this.arrow.onTap(kind);
+		const level = this.arrow.handleTap(kind);
 		// プレイヤークラスのタップ時処理起動
-		this.player.onTap(level, this.lifeValue);
+		this.player.handleTap(level, this.lifeValue);
 		this.setAudioTap(level);
 		// effect
 		const timeline: tl.Timeline = this.scene.game.vars.scenedata.timeline;

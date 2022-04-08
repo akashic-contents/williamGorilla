@@ -23,7 +23,7 @@ export abstract class GameBase extends g.E {
 
 	/**
 	 * このクラスで使用するオブジェクトを生成するメソッド
-	 * Scene#loadedを起点とする処理からコンストラクタの直後に呼ばれる。
+	 * Scene#onLoadを起点とする処理からコンストラクタの直後に呼ばれる。
 	 * このクラスはゲーム画面終了時も破棄されず、次のゲームで再利用される。
 	 * そのためゲーム状態の初期化はinitではなくshowContentで行う必要がある。
 	 */
@@ -106,7 +106,7 @@ export abstract class GameBase extends g.E {
 	 * ゲーム画面に遷移したあとReady～Startジングルの前に呼ばれ、
 	 * ゲーム前ガイド表示を開始する。
 	 * ゲーム前ガイド表示を行わない場合はfalseを返す。
-	 * trueを返すとonUpdatePreGameGuideが呼ばれるようになる。
+	 * trueを返すとhandleUpdatePreGameGuideが呼ばれるようになる。
 	 * @return {boolean} ゲーム前ガイド表示を行わない場合はfalse
 	 */
 	startPreGameGuide(): boolean {
@@ -138,19 +138,19 @@ export abstract class GameBase extends g.E {
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれるメソッド
+	 * Scene#onUpdateを起点とする処理から呼ばれるメソッド
 	 * startPreGameGuideでtrueを返した場合に呼ばれ始め、
 	 * この関数でtrueを返すと呼び出しが止まるとともに
 	 * Ready～Startジングルが開始される。
 	 * @return {boolean} ゲーム前ガイド表示を終了する場合はtrue
 	 */
-	onUpdatePreGameGuide(): boolean {
+	handleUpdatePreGameGuide(): boolean {
 		return true;
 	}
 
 	/**
-	 * Scene#updateを起点とする処理から呼ばれるメソッド
+	 * Scene#onUpdateを起点とする処理から呼ばれるメソッド
 	 * ゲーム画面でない期間には呼ばれない。
 	 */
-	abstract onUpdate(): void;
+	abstract handleUpdate(): void;
 }

@@ -29,7 +29,7 @@ export class PointAdder extends g.E {
 	 */
 	createLabel(): void {
 		const spoScore = spriteUtil.createSpriteParameter(AssetInfo.numWg);
-		const sfmNumWG = spriteUtil.createSpriteFrameMap(AssetInfo.numWg, this.scene.assets);
+		const sfmNumWG = spriteUtil.createSpriteFrameMap(AssetInfo.numWg);
 
 		const charW: number = AssetInfo.numWg.fontWidth;
 		const scoreDigit: number = define.GET_POINT_DIGIT;
@@ -38,7 +38,7 @@ export class PointAdder extends g.E {
 		this.modified();
 
 		this.pointLabel = entityUtil.createLabel(
-			this.scene, "0000", fontGreen, scoreDigit, g.TextAlign.Left);
+			this.scene, "0000", fontGreen, scoreDigit, "left");
 		entityUtil.setXY(this.pointLabel, define.GET_POINT_X, define.GET_POINT_Y);
 		this.append(this.pointLabel);
 		// ＋

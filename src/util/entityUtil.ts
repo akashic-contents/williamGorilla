@@ -1,3 +1,4 @@
+
 /**
  * g.Eとそのサブクラス（g.Spriteを除く）を扱うユーティリティ関数群
  */
@@ -89,16 +90,16 @@ export namespace entityUtil {
 	 * @param  _text       Labelに初期設定する文字列
 	 * @param  _bitmapFont 使用するBitmapFont
 	 * @param  _maxLength  想定する桁数
-	 * @param  _align      設定するTextAlign
+	 * @param  _align      設定するTextAlignString
 	 * @return             生成したLabel
 	 */
 	export function createLabel(
 		_scene: g.Scene, _text: string, _bitmapFont: g.BitmapFont,
-		_maxLength: number, _align: g.TextAlign): g.Label {
+		_maxLength: number, _align: g.TextAlignString): g.Label {
 		const label = new g.Label({
 			scene: _scene,
 			text: _text,
-			bitmapFont: _bitmapFont,
+			font: _bitmapFont,
 			fontSize: _bitmapFont.defaultGlyphHeight
 		});
 		label.aligning(_bitmapFont.defaultGlyphWidth * _maxLength, _align);
@@ -122,7 +123,7 @@ export namespace entityUtil {
 		}
 		const text = nums.join("");
 		const label = createLabel(
-			_scene, text, _bitmapFont, _digit, g.TextAlign.Right);
+			_scene, text, _bitmapFont, _digit, "right");
 		return label;
 	}
 
@@ -132,9 +133,9 @@ export namespace entityUtil {
 	 * @param  _x     右端の数字の左上のx座標
 	 * @param  _y     右端の数字の左上のy座標
 	 */
-	export function moveNumLabelTo(
-		_label: g.Label, _x: number, _y: number): void {
-		_label.x = _x + _label.bitmapFont.defaultGlyphWidth - _label.width;
+	export function moveNumLabelTo(_label: g.Label, _x: number, _y: number): void {
+		const bitmapFont = _label.font as g.BitmapFont;
+		_label.x = _x + bitmapFont.defaultGlyphWidth - _label.width;
 		_label.y = _y;
 		_label.modified();
 	}
